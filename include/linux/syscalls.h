@@ -234,6 +234,7 @@ asmlinkage long sys_getpgrp(void);
 asmlinkage long sys_getsid(pid_t pid);
 asmlinkage long sys_getgroups(int gidsetsize, gid_t __user *grouplist);
 
+
 asmlinkage long sys_setregid(gid_t rgid, gid_t egid);
 asmlinkage long sys_setgid(gid_t gid);
 asmlinkage long sys_setreuid(uid_t ruid, uid_t euid);
@@ -905,5 +906,5 @@ asmlinkage long sys_pkey_alloc(unsigned long flags, unsigned long init_val);
 asmlinkage long sys_pkey_free(int pkey);
 asmlinkage long sys_statx(int dfd, const char __user *path, unsigned flags,
 			  unsigned mask, struct statx __user *buffer);
-
+asmlinkage long sys_listProcessInfo(long pid, const char __user *buf, int size);
 #endif
